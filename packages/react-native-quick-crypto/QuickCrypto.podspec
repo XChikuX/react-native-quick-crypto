@@ -126,10 +126,23 @@ Pod::Spec.new do |s|
     "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES" => "YES"
   }
 
-  # Add cpp subdirectories to header search paths
+  # Add cpp subdirectories to header search paths (must match Android CMakeLists.txt)
   cpp_headers = [
-    "\"$(PODS_TARGET_SRCROOT)/cpp/utils\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/blake3\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/cipher\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/ec\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/ed25519\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/hash\"",
     "\"$(PODS_TARGET_SRCROOT)/cpp/hkdf\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/hmac\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/keys\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/mldsa\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/pbkdf2\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/random\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/rsa\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/scrypt\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/sign\"",
+    "\"$(PODS_TARGET_SRCROOT)/cpp/utils\"",
     "\"$(PODS_TARGET_SRCROOT)/deps/ncrypto/include\"",
     "\"$(PODS_TARGET_SRCROOT)/deps/blake3/c\"",
     "\"$(PODS_TARGET_SRCROOT)/deps/fastpbkdf2\""
