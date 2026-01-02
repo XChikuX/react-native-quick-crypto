@@ -156,10 +156,10 @@ Pod::Spec.new do |s|
       "\"$(PODS_ROOT)/../../packages/react-native-quick-crypto/ios/libsodium-stable/src/libsodium/include\"",
       "\"$(PODS_ROOT)/../../packages/react-native-quick-crypto/ios/libsodium-stable/src/libsodium/include/sodium\""
     ]
-    xcconfig["HEADER_SEARCH_PATHS"] = (cpp_headers + sodium_headers).join(' ')
+    xcconfig["HEADER_SEARCH_PATHS"] = "$(inherited) " + (cpp_headers + sodium_headers).join(' ')
     xcconfig["GCC_PREPROCESSOR_DEFINITIONS"] = "$(inherited) FOLLY_NO_CONFIG FOLLY_CFG_NO_COROUTINES BLSALLOC_SODIUM=1"
   else
-    xcconfig["HEADER_SEARCH_PATHS"] = cpp_headers.join(' ')
+    xcconfig["HEADER_SEARCH_PATHS"] = "$(inherited) " + cpp_headers.join(' ')
   end
 
   s.pod_target_xcconfig = xcconfig
