@@ -10,7 +10,7 @@
 #include "GCMCipher.hpp"
 #include "HybridCipherFactorySpec.hpp"
 #include "OCBCipher.hpp"
-#include "../utils/Utils.hpp"
+#include "utils/Utils.hpp"
 #include "XSalsa20Cipher.hpp"
 
 namespace margelo::nitro::crypto {

@@ -57,9 +57,10 @@ add_library(
 # add Nitrogen specs
 include(${CMAKE_SOURCE_DIR}/../nitrogen/generated/android/QuickCrypto+autolinking.cmake)
 
-# local includes
+# local includes (include cpp root for consistent include paths with iOS)
 include_directories(
   "src/main/cpp"
+  "../cpp"
   "../cpp/blake3"
   "../cpp/cipher"
   "../cpp/ec"

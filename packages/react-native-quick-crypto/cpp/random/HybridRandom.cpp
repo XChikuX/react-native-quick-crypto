@@ -2,7 +2,7 @@
 #include <openssl/rand.h>
 
 #include "HybridRandom.hpp"
-#include "../utils/Utils.hpp"
+#include "utils/Utils.hpp"
 
 namespace margelo::nitro::crypto {
 

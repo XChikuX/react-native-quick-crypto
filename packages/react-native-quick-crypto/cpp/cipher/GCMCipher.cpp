@@ -1,5 +1,5 @@
 #include "GCMCipher.hpp"
-#include "../utils/Utils.hpp"
+#include "utils/Utils.hpp"
 #include <openssl/err.h>
 #include <openssl/evp.h>
 #include <stdexcept>

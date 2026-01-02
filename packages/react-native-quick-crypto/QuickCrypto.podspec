@@ -127,7 +127,9 @@ Pod::Spec.new do |s|
   }
 
   # Add cpp subdirectories to header search paths (must match Android CMakeLists.txt)
+  # Include cpp root for nitrogen generated files that include headers with relative paths
   cpp_headers = [
+    "\"$(PODS_TARGET_SRCROOT)/cpp\"",
     "\"$(PODS_TARGET_SRCROOT)/cpp/blake3\"",
     "\"$(PODS_TARGET_SRCROOT)/cpp/cipher\"",
     "\"$(PODS_TARGET_SRCROOT)/cpp/ec\"",
